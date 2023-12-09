@@ -4,8 +4,18 @@ import RInput from "../lib/Input";
 import { getButtonFormProps, getInputFormProps } from "../utils/formUtil";
 import RButton from "../lib/Button";
 import usePartnerLogin from "../hook/usePartnerLogin";
+import { useNavigate } from "react-router-dom";
+import { getSession } from "../utils/sessionUtils";
+import { getAddProductUrl } from "../utils/navUtils";
 
 const PartnerLogin = () => {
+
+    const navigate = useNavigate();
+
+    const navToProductAdd = () => {
+        const account_sid = getSession("account_sid");
+        navigate(getAddProductUrl({ partner_account_sid: account_sid }));
+    }
 
     const {
         register,
@@ -65,6 +75,10 @@ const PartnerLogin = () => {
 
                 <Button onClick={() => partnerLogout()}>
                     Logout
+                </Button>
+
+                <Button onClick={() => navToProductAdd()}>
+                    Add Product
                 </Button>
             </Card>
         </Center>

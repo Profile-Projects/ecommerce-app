@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import CustomerLogin from "./component/CustomerLogin";
 import CustomerLogout from "./component/CustomerLogout";
 import PartnerLogin from "./component/PartnerLogin";
+import ProductCategoryAdd from "./component/ProductCategoryAdd";
+import AddProduct from "./component/AddProduct";
 
 export const router = createBrowserRouter([
     {
@@ -23,5 +25,13 @@ export const router = createBrowserRouter([
     {
         path: '/partner/sign-up',
         element: <>Partner Signup</>
+    },
+    {
+        path: `/partner/category`,
+        element: <ProductCategoryAdd />
+    },
+    {
+        path: `/partner/:partner_account_sid/product/add`,
+        element: <AddProduct />
     }
 ]);
