@@ -4,6 +4,7 @@ import CustomerLogout from "./component/CustomerLogout";
 import PartnerLogin from "./component/PartnerLogin";
 import ProductCategoryAdd from "./component/ProductCategoryAdd";
 import AddProduct from "./component/AddProduct";
+import ProductList from "./component/ProductList";
 
 export const router = createBrowserRouter([
     {
@@ -33,5 +34,9 @@ export const router = createBrowserRouter([
     {
         path: `/partner/:partner_account_sid/product/add`,
         element: <AddProduct />
+    },
+    {
+        path: `/products`,
+        element: <ProductList />
     }
 ]);

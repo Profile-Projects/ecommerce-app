@@ -1,5 +1,5 @@
 import React from "react";
-import useProduct from "../hook/useProduct";
+import useAddProduct from "../hook/useAddProduct";
 import { Container } from "@chakra-ui/react";
 import RInput from "../lib/Input";
 import { getButtonFormProps, getInputFormProps } from "../utils/formUtil";
@@ -20,7 +20,7 @@ const AddProduct = () => {
         errors,
         onSubmitProduct,
         getFieldState
-    } = useProduct({
+    } = useAddProduct({
         partner_account_sid
     });
 

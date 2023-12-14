@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { addProductApi } from "../api/ProductApi";
 import { getHeaderConfig } from "../utils/sessionUtils";
 
-const useProduct = ({
+const useAddProduct = ({
     partner_account_sid
 }) => {
 
@@ -80,4 +80,4 @@ const useProduct = ({
     }
 };
 
-export default useProduct;
+export default useAddProduct;
